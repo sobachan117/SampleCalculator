@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="bg_calc_output_area">#EEEEEE</color>
+    <color name="bg_calc_number_button">#666666</color>
+    <color name="bg_calc_operator_button">#DF612B</color>
+    <color name="bg_calc_all_cancel_button">#DC143C</color>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="NestedWeights">
+
+    <RelativeLayout
+        android:id="@+id/output_text_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/calc_output_area_height"
+        android:layout_margin="@dimen/calc_button_margin"
+        android:background="@color/bg_calc_output_area">
+
+        <TextView
+            android:id="@+id/output_main_text"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/output_sub_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calc_output_area_height"
+            android:layout_margin="@dimen/calc_button_margin"
+            android:background="@color/bg_calc_output_area"
+            android:lines="1"
+            android:gravity="center_vertical|end"
+            android:textSize="@dimen/calc_output_main_text_size" />
+
+        <TextView
+            android:id="@+id/output_sub_text"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:gravity="center_vertical|end"
+            android:textSize="@dimen/calc_output_sub_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/output_text_area"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/column1_area"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/column2_area"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/column3_area"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/column4_area"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</RelativeLayout>
