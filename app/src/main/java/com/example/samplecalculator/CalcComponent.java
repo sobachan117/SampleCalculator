@@ -2,23 +2,23 @@ package com.example.samplecalculator;
 
 import android.support.annotation.NonNull;
 
-class CalcButtonComponent {
+class CalcComponent {
 
-    private CalcButtonType mButtonType;
+    private CalcType mButtonType;
 
     private final String mDisplayName;
 
     private final int mBackgroundColorResId;
 
-    CalcButtonComponent(@NonNull CalcButtonType calcButtonType,
-                        @NonNull String displayName,
-                        int backgroundColorResId) {
-        mButtonType = calcButtonType;
+    CalcComponent(@NonNull CalcType calcType,
+                  @NonNull String displayName,
+                  int backgroundColorResId) {
+        mButtonType = calcType;
         mDisplayName = displayName;
         mBackgroundColorResId = backgroundColorResId;
     }
 
-    CalcButtonType getButtonType() {
+    CalcType getType() {
         return mButtonType;
     }
 

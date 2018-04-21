@@ -58,46 +58,46 @@ public class CalculatorFragment extends Fragment implements CalculatorContract.V
 
     private void setupButtons(@NonNull View view) {
 
-        List<CalcButtonComponent> column;
+        List<CalcComponent> column;
 
         // Column 1
         column = Arrays.asList(
-                new CalcButtonComponent(CalcButtonType.Number, "7", R.color.bg_calc_number_button),
-                new CalcButtonComponent(CalcButtonType.Number, "4", R.color.bg_calc_number_button),
-                new CalcButtonComponent(CalcButtonType.Number, "1", R.color.bg_calc_number_button),
-                new CalcButtonComponent(CalcButtonType.AllCancel, "AC", R.color.bg_calc_all_cancel_button));
+                new CalcComponent(CalcType.Number, "7", R.color.bg_calc_number_button),
+                new CalcComponent(CalcType.Number, "4", R.color.bg_calc_number_button),
+                new CalcComponent(CalcType.Number, "1", R.color.bg_calc_number_button),
+                new CalcComponent(CalcType.AllCancel, "AC", R.color.bg_calc_all_cancel_button));
         setupButtonVisDesign((ViewGroup) view.findViewById(R.id.column1_area), column);
 
         // Column 2
         column = Arrays.asList(
-                new CalcButtonComponent(CalcButtonType.Number, "8", R.color.bg_calc_number_button),
-                new CalcButtonComponent(CalcButtonType.Number, "5", R.color.bg_calc_number_button),
-                new CalcButtonComponent(CalcButtonType.Number, "2", R.color.bg_calc_number_button),
-                new CalcButtonComponent(CalcButtonType.Number, "0", R.color.bg_calc_number_button));
+                new CalcComponent(CalcType.Number, "8", R.color.bg_calc_number_button),
+                new CalcComponent(CalcType.Number, "5", R.color.bg_calc_number_button),
+                new CalcComponent(CalcType.Number, "2", R.color.bg_calc_number_button),
+                new CalcComponent(CalcType.Number, "0", R.color.bg_calc_number_button));
         setupButtonVisDesign((ViewGroup) view.findViewById(R.id.column2_area), column);
 
         // Column 3
         column = Arrays.asList(
-                new CalcButtonComponent(CalcButtonType.Number, "9", R.color.bg_calc_number_button),
-                new CalcButtonComponent(CalcButtonType.Number, "6", R.color.bg_calc_number_button),
-                new CalcButtonComponent(CalcButtonType.Number, "3", R.color.bg_calc_number_button),
-                new CalcButtonComponent(CalcButtonType.Decimal, ".", R.color.bg_calc_number_button));
+                new CalcComponent(CalcType.Number, "9", R.color.bg_calc_number_button),
+                new CalcComponent(CalcType.Number, "6", R.color.bg_calc_number_button),
+                new CalcComponent(CalcType.Number, "3", R.color.bg_calc_number_button),
+                new CalcComponent(CalcType.Decimal, ".", R.color.bg_calc_number_button));
         setupButtonVisDesign((ViewGroup) view.findViewById(R.id.column3_area), column);
 
         // Column 4
         column = Arrays.asList(
-                new CalcButtonComponent(CalcButtonType.Divide, "÷", R.color.bg_calc_operator_button),
-                new CalcButtonComponent(CalcButtonType.Multiply, "×", R.color.bg_calc_operator_button),
-                new CalcButtonComponent(CalcButtonType.Minus, "−", R.color.bg_calc_operator_button),
-                new CalcButtonComponent(CalcButtonType.Plus, "+", R.color.bg_calc_operator_button),
-                new CalcButtonComponent(CalcButtonType.Calculate, "=", R.color.bg_calc_operator_button));
+                new CalcComponent(CalcType.Divide, "÷", R.color.bg_calc_operator_button),
+                new CalcComponent(CalcType.Multiply, "×", R.color.bg_calc_operator_button),
+                new CalcComponent(CalcType.Minus, "−", R.color.bg_calc_operator_button),
+                new CalcComponent(CalcType.Plus, "+", R.color.bg_calc_operator_button),
+                new CalcComponent(CalcType.Calculate, "=", R.color.bg_calc_operator_button));
         setupButtonVisDesign((ViewGroup) view.findViewById(R.id.column4_area), column);
     }
 
     private void setupButtonVisDesign(@NonNull ViewGroup columnView,
-                                      @NonNull List<CalcButtonComponent> components) {
+                                      @NonNull List<CalcComponent> components) {
 
-        for (final CalcButtonComponent component : components) {
+        for (final CalcComponent component : components) {
             CalculatorButton button = new CalculatorButton(getContext());
             button.setText(component.getDisplayName());
             button.setBackgroundColor(getResources().getColor(component.getBackgroundColorResId()));

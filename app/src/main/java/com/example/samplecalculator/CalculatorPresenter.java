@@ -18,10 +18,16 @@ class CalculatorPresenter implements CalculatorContract.Presenter {
     @Override
     public void start() {
         mView.show();
+        mView.updateText(mCalculatorState);
     }
 
     @Override
-    public void onClickButton(@NonNull CalcButtonComponent calcButtonComponent) {
-        mView.updateText(mCalculatorState.calc(calcButtonComponent));
+    public void onClickButton(@NonNull CalcComponent calcComponent) {
+
+        mView.updateText(mCalculatorState.calc(calcComponent));
+
+        if (calcComponent.getType().equals(CalcType.Calculate)) {
+            mCalculatorState.clear();
+        }
     }
 }

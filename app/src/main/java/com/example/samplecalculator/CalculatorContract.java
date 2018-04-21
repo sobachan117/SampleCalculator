@@ -15,6 +15,6 @@ public interface CalculatorContract {
 
         void start();
 
-        void onClickButton(@NonNull CalcButtonComponent calcButtonComponent);
+        void onClickButton(@NonNull CalcComponent calcComponent);
     }
 }

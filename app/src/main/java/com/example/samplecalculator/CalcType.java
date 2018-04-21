@@ -1,6 +1,6 @@
 package com.example.samplecalculator;
 
-public enum CalcButtonType {
+public enum CalcType {
 
     Number,
     Decimal,
@@ -9,5 +9,9 @@ public enum CalcButtonType {
     Divide,
     Multiply,
     Calculate,
-    AllCancel
+    AllCancel;
+
+    boolean isOperator() {
+        return !CalcType.Number.equals(this);
+    }
 }
